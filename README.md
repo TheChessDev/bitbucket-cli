@@ -6,10 +6,32 @@ To install dependencies:
 bun install
 ```
 
-To run:
+Configure a token in the `.env` file
 
-```bash
-bun run index.ts
+```javascript
+BITBUCKET_ACCESS_TOKEN=<Token>
 ```
 
-This project was created using `bun init` in bun v1.1.29. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+To clone a repo:
+
+```bash
+bun clone
+```
+
+To trigger a pipeline for a branch:
+
+```bash
+bun pipelines:create
+```
+
+To get the pipeline status for a branch:
+
+```bash
+bun pipelines:status
+```
+
+To trigger an existing pipeline for a repo:
+
+```bash
+bun pipelines:retry
+```

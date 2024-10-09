@@ -4,6 +4,7 @@ import inquirerAutocompletePrompt from "inquirer-autocomplete-prompt";
 import { runPipeline } from "./commands/runPipeline";
 import { runClone } from "./commands/runClone";
 import { createPipeline } from "./commands/createPipeline";
+import { runPipelineStatus } from "./commands/runPipelineStatus";
 
 inquirer.registerPrompt("autocomplete", inquirerAutocompletePrompt);
 
@@ -24,5 +25,10 @@ program
     "Create a pipeline in a Bitbucket repository for a specific branch",
   )
   .action(createPipeline);
+
+program
+  .command("pipeline-status")
+  .description("Get the status of running pipelines in a Bitbucket repository")
+  .action(runPipelineStatus);
 
 program.parse(process.argv);

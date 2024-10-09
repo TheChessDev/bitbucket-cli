@@ -5,7 +5,8 @@
   "scripts": {
     "clone": "bun run index.ts clone",
     "pipeline:retry": "bun run index.ts run-pipeline",
-    "pipeline:create": "bun run index.ts create-pipeline"
+    "pipeline:create": "bun run index.ts create-pipeline",
+    "pipeline:status": "bun run index.ts pipeline-status"
   },
   "devDependencies": {
     "@types/bun": "latest",
